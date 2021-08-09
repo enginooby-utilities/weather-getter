@@ -1,0 +1,32 @@
+:root {
+        /* --highlight-color: red; */
+}
+
+.display-content > .container {
+        max-width: 600px;
+}
+
+#temperature {
+        font-size: 3.5rem;
+}
+
+.form-group {
+        margin-bottom: 0;
+}
+
+input#location {
+        height: 50px !important;
+        margin-top: 1px;
+}
+
+img {
+        border-radius: var(--border-radius);
+}
+
+.weather-info {
+        font-style: italic;
+}
+
+p {
+        margin: 7px 0;
+}

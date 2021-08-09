@@ -1,0 +1,21 @@
+{
+        "name": "Checker",
+        "version": "1.0.0",
+        "description": "",
+        "main": "index.js",
+        "scripts": {
+                "start": "tsc-watch --onSuccess \"node src/app.js\"",
+                "watch-php": "nodemon -e php --exec \"php \"views/file-converter.php\"\""
+        },
+        "keywords": [],
+        "author": "",
+        "license": "ISC",
+        "dependencies": {
+                "axios": "^0.21.1",
+                "express": "^4.17.1",
+                "hbs": "^4.1.2"
+        },
+        "devDependencies": {
+                "@types/express": "^4.17.13"
+        }
+}
