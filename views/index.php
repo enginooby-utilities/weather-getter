@@ -10,25 +10,30 @@ Head('weather getter')
         <div class="display-table">
                 <div class="display-content ">
                         <div class="container text-center">
+                                <?php TitleBar('Weather Checker')->show() ?>
                                 <h2> How is the <span class="highlight-color">Weather</span>?</h2>
-                                <div class="row mt-5 pr-3">
-                                        <?php Input(id: 'location', placeholder: 'Location', wrapperClass: 'col-10')->show(); ?>
-                                        <?php Button(label: 'Check<i class="fas fa-search ml-2"></i>', id: 'checkBtn', wrapperClass: 'float-right col-2')->show(); ?>
-                                </div>
+                                <?php
+                                Flexbox()
+                                        ->class('mt-5')
+                                        ->componentClass('my-auto')
+                                        ->add(Input(id: 'location', placeholder: 'Location', wrapperClass: 'col-10 pr-2 pl-0'))
+                                        ->add(Button(id: 'checkBtn', label: 'Check<i class="fas fa-search ml-2"></i>', wrapperClass: 'col-2'))
+                                        ->show();
+                                ?>
                                 <div class="box-border mt-3">
-                                        <h6 id="location-output">-</h6>
+                                        <h6 id="location-output">Wroclaw - Poland</h6>
                                         <div class="row mt-5    ">
                                                 <div class="col-4  my-auto">
                                                         <img src="https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png" alt="Weather icon">
-                                                        <p id="description" class="highlight-color">-</p>
+                                                        <p id="description" class="highlight-color"><b>Sunny</b></p>
                                                 </div>
                                                 <div class="col-4 my-auto">
-                                                        <p id="temperature" class="m-0"> <span id="temperature">- &deg;C</span></p>
+                                                        <p id="temperature" class="m-0"> <span id="temperature">15 &deg;C</span></p>
                                                 </div>
                                                 <div class="col-4 my-auto weather-info">
-                                                        <p>Wind: <span id="wind">-</span> kmph</p>
-                                                        <p>Precip: <span id="precip">-</span> mm</p>
-                                                        <p>Pressure: <span id="pressure">-</span> mb</p>
+                                                        <p>Wind: <span id="wind">8</span> kmph</p>
+                                                        <p>Precip: <span id="precip">0</span> mm</p>
+                                                        <p>Pressure: <span id="pressure">969</span> mb</p>
                                                 </div>
                                         </div>
                                 </div>

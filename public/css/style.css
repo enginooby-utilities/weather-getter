@@ -1,26 +1,21 @@
 :root {
-        /* --highlight-color: red; */
+        --container-max-width: 600px;
 }
 
 .display-content > .container {
-        max-width: 600px;
+        max-width: var(--container-max-width);
+}
+
+.title-bar {
+        display: none;
 }
 
 #temperature {
         font-size: 3.5rem;
 }
 
-.form-group {
-        margin-bottom: 0;
-}
-
 input#location {
-        height: 50px !important;
-        margin-top: 1px;
-}
-
-img {
-        border-radius: var(--border-radius);
+        height: 51px;
 }
 
 .weather-info {

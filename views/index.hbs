@@ -14,29 +14,36 @@
         <div class="display-table">
                 <div class="display-content ">
                         <div class="container text-center">
-                                <h2> How is the <span class="highlight-color">Weather</span>?</h2>
-                                <div class="row mt-5 pr-3">
-                                           <div class="form-item col-10">
+                                <div class=" title-bar">
+        <div class="title-bar-text-wrapper scalable">Weather Checker</div>
+        <div class="title-bar-text scalable">Weather Checker</div>
+        <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Restore"></button>
+                <button aria-label="Close"></button>
+        </div>
+</div>                                <h2> How is the <span class="highlight-color">Weather</span>?</h2>
+                                <div class="mt-5 d-flex justify-content-center flex-row">
+                           <div class="form-item col-10 pr-2 pl-0 my-auto">
            <div class="form-group">
                    <input id='location'  placeholder='Location'  type="text" class="form-control">
            </div>
-   </div>                                          <div class='button-border  float-right col-2'>
+   </div>                          <div class='button-border col-2 my-auto'>
           <a href='javascript:;' class='button' id='checkBtn' >Check<i class="fas fa-search ml-2"></i></a>
-  </div>                                </div>
-                                <div class="box-border mt-3">
-                                        <h6 id="location-output">-</h6>
+  </div>        </div>                                <div class="box-border mt-3">
+                                        <h6 id="location-output">Wroclaw - Poland</h6>
                                         <div class="row mt-5    ">
                                                 <div class="col-4  my-auto">
                                                         <img src="https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png" alt="Weather icon">
-                                                        <p id="description" class="highlight-color">-</p>
+                                                        <p id="description" class="highlight-color"><b>Sunny</b></p>
                                                 </div>
                                                 <div class="col-4 my-auto">
-                                                        <p id="temperature" class="m-0"> <span id="temperature">- &deg;C</span></p>
+                                                        <p id="temperature" class="m-0"> <span id="temperature">15 &deg;C</span></p>
                                                 </div>
                                                 <div class="col-4 my-auto weather-info">
-                                                        <p>Wind: <span id="wind">-</span> kmph</p>
-                                                        <p>Precip: <span id="precip">-</span> mm</p>
-                                                        <p>Pressure: <span id="pressure">-</span> mb</p>
+                                                        <p>Wind: <span id="wind">8</span> kmph</p>
+                                                        <p>Precip: <span id="precip">0</span> mm</p>
+                                                        <p>Pressure: <span id="pressure">969</span> mb</p>
                                                 </div>
                                         </div>
                                 </div>
