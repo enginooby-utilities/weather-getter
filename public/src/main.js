@@ -17,7 +17,10 @@ function onCheckBtnClick() {
     fetch(`http://localhost:3000/weather?location=${encodeURI(eLocationInput.value)}`).then(response => {
         response.json().then((data) => {
             if (data.error) {
-                console.log(data.error);
+                eLocationOuput.innerText = data.error;
+            }
+            else if (!data.location) {
+                eLocationOuput.innerText = 'Unable to find location :\'(';
             }
             else {
                 eLocationOuput.innerText = `${data.location.name} - ${data.location.country}`;

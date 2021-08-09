@@ -38,7 +38,7 @@ function getCurrentTemp2(location, callback) {
         .get(requestUrl)
         .then(response => callback(undefined, response.data))
         // return empty response instead of undefined to avoid error while destructuring
-        .catch(error => callback("Failed to make request", {}));
+        .catch(error => callback("Something went wrond :'(", {}));
 }
 exports.getCurrentTemp2 = getCurrentTemp2;
 const toRequestUrl = (location) => `${BASE_URL}/current?access_key=${API_KEY}&query=${encodeURI(location)}`;

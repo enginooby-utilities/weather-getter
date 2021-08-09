@@ -13,7 +13,7 @@ Head('weather getter')
                                 <h2> How is the <span class="highlight-color">Weather</span>?</h2>
                                 <div class="row mt-5 pr-3">
                                         <?php Input(id: 'location', placeholder: 'Location', wrapperClass: 'col-10')->show(); ?>
-                                        <?php Button(label: 'Check<i class="fas fa-search ml-2"></i>', id: 'checkBtn', class: 'float-right col-2')->show(); ?>
+                                        <?php Button(label: 'Check<i class="fas fa-search ml-2"></i>', id: 'checkBtn', wrapperClass: 'float-right col-2')->show(); ?>
                                 </div>
                                 <div class="box-border mt-3">
                                         <h6 id="location-output">-</h6>

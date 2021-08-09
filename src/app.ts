@@ -17,15 +17,15 @@ app.get('', (req, res) => {
 })
 
 app.get('/weather', (req, res) => {
-        if (!req.query.location) {
-                return res.send('Location is required.')
-        }
+        if (!req.query.location) return res.send({ error: 'Location is required.' })
 
         getCurrentTemp2(req.query.location.toString(), (error, { location, current }) => {
                 if (error) {
                         res.send({
                                 error
                         })
+                } else if (!location || !current) {
+                        res.send({ error: 'Unable to find location :\'(' })
                 }
                 else {
                         res.send({
@@ -38,25 +38,7 @@ app.get('/weather', (req, res) => {
 app.get('*', (req, res) => {
         res.send("404")
 })
-// getCurrentTemp2("Binh Duong", (error, { location, current }) => {
-//         if (error) {
-//                 console.log(error);
-//         } else if ({ location, current }) {
-//                 console.log('>>>>>>>>>>>>>>>>>> LOCATION <<<<<<<<<<<<<<<<<<<<< ');
-//                 console.log(' Name: ', location.name);
-//                 console.log(' County: ', location.country);
-//                 console.log(' Lat: ', location.lat);
-//                 console.log(' Lon: ', location.lon);
-//                 console.log('>>>>>>>>>>>>>>>>>> WEATHER <<<<<<<<<<<<<<<<<<<<< ');
-//                 console.log('Temperature: ', current.temperature);
-//                 console.log('Description: ', current.weather_descriptions[0]);
-
-//                 res.send({ location, current });
-//         }
-// })
 
 app.listen(3000, () => {
         console.log('Server is up on port 3000')
 })
-
-//  getCurrentTemp1("Ha noi") .then(temp => console.log(temp))
