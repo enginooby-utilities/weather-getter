@@ -14,7 +14,7 @@ function onCheckBtnClick() {
     eWind.innerText = '-';
     ePrecip.innerText = '-';
     ePressure.innerText = '-';
-    fetch(`/weather?location=${encodeURI(eLocationInput.value)}`).then(response => {
+    fetch(`/weather-getter/weather?location=${encodeURI(eLocationInput.value)}`).then(response => {
         response.json().then((data) => {
             if (data.error) {
                 eLocationOuput.innerText = data.error;
