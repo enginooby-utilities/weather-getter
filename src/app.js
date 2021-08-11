@@ -12,12 +12,12 @@ const duiDir = path_1.default.join(__dirname, '../../../dui/');
 app.set('view engine', 'hbs');
 app.use('/projects/weather-getter/public', express_1.default.static(staticDir));
 app.use('/dui', express_1.default.static(duiDir));
-app.get('/weather-getter', (req, res) => {
+app.get('/home', (req, res) => {
     res.render('index', {
         title: "Hieu"
     });
 });
-app.get('/weather-getter/weather', (req, res) => {
+app.get('/home/weather', (req, res) => {
     if (!req.query.location)
         return res.send({ error: 'Location is required.' });
     forecast_1.getCurrentTemp2(req.query.location.toString(), (error, { location, current }) => {
