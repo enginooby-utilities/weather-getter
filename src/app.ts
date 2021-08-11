@@ -7,7 +7,7 @@ const staticDir = path.join(__dirname, '../public')
 const duiDir = path.join(__dirname, '../../../dui/')
 
 app.set('view engine', 'hbs')
-app.use(express.static(staticDir))
+app.use('/public', express.static(staticDir))
 app.use('/dui', express.static(duiDir))
 
 app.get('/home', (req, res) => {

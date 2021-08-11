@@ -2,7 +2,7 @@
 if ((@include_once "../../dui/_index.php") === false) {
         include_once __DIR__ . "/../../../dui/_index.php";
 }
-Head('weather getter')->css('/css/style.css')->show();
+Head('weather getter')->css('public/css/style.css')->show();
 ?>
 
 <body class="flat-style">
@@ -39,7 +39,7 @@ Head('weather getter')->css('/css/style.css')->show();
                         </div>
                 </div>
         </div>
-        <script src="/src/main.js" type="module"></script>
+        <script src="public/src/main.js" type="module"></script>
         <script async src="dui/js/main.js" type="module"></script>
 </body>
 
