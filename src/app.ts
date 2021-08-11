@@ -10,7 +10,7 @@ app.set('view engine', 'hbs')
 app.use(express.static(staticDir))
 app.use('/dui', express.static(duiDir))
 
-app.get('', (req, res) => {
+app.get('/home', (req, res) => {
         res.render('index', {
                 title: "Hieu"
         })
