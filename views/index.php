@@ -1,9 +1,8 @@
 <?php
-include_once "../../dui/_index.php";
-// echo Head("Checker", "/css/style.css");
-Head('weather getter')
-        ->css('/css/style.css')
-        ->show();
+if ((@include_once "../../dui/_index.php") === false) {
+        include_once __DIR__ . "/../../../dui/_index.php";
+}
+Head('weather getter')->css('/css/style.css')->show();
 ?>
 
 <body class="flat-style">
@@ -24,11 +23,11 @@ Head('weather getter')
                                         <h6 id="location-output">Wroclaw - Poland</h6>
                                         <div class="row mt-5    ">
                                                 <div class="col-4  my-auto">
-                                                        <img src="https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png" alt="Weather icon">
+                                                        <img src="https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png" alt="weather icon">
                                                         <p id="description" class="highlight-color"><b>Sunny</b></p>
                                                 </div>
                                                 <div class="col-4 my-auto">
-                                                        <p id="temperature" class="m-0"> <span id="temperature">15 &deg;C</span></p>
+                                                        <p class="scalable" id="temperature" class="m-0"> <span id="temperature">15 &deg;C</span></p>
                                                 </div>
                                                 <div class="col-4 my-auto weather-info">
                                                         <p>Wind: <span id="wind">8</span> kmph</p>

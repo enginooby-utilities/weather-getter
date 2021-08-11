@@ -16,7 +16,7 @@ function onCheckBtnClick() {
         ePrecip.innerText = '-';
         ePressure.innerText = '-';
 
-        fetch(`http://localhost:3000/weather?location=${encodeURI(eLocationInput.value)}`).then(response => {
+        fetch(`/weather?location=${encodeURI(eLocationInput.value)}`).then(response => {
                 response.json().then((data) => {
                         if (data.error) {
                                 eLocationOuput.innerText = data.error;
