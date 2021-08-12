@@ -40,7 +40,7 @@ Head('weather getter')->css('/projects/weather-getter/public/css/style.css')->sh
                 </div>
         </div>
         <script src="/projects/weather-getter/public/src/main.js" type="module"></script>
-        <script async src="dui/js/main.js" type="module"></script>
+        <script async src="/dui/js/main.js" type="module"></script>
 </body>
 
 </html>
