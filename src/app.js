@@ -17,7 +17,7 @@ app.get('/home', (req, res) => {
         title: "Hieu"
     });
 });
-app.get('/home/weather', (req, res) => {
+app.get('/weather', (req, res) => {
     if (!req.query.location)
         return res.send({ error: 'Location is required.' });
     forecast_1.getCurrentTemp2(req.query.location.toString(), (error, { location, current }) => {
