@@ -11,13 +11,13 @@ app.set('view engine', 'hbs')
 app.use('/projects/weather-getter/public', express.static(staticDir))
 app.use('/dui', express.static(duiDir))
 
-app.get('/', (req, res) => {
+app.get('/weather-getter', (req, res) => {
         res.render('index', {
                 title: "Hieu"
         })
 })
 
-app.get('/weather', (req, res) => {
+app.get('/weather-getter/weather', (req, res) => {
         if (!req.query.location) return res.send({ error: 'Location is required.' })
 
         getCurrentTemp2(req.query.location.toString(), (error, { location, current }) => {
