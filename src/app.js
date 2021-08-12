@@ -12,7 +12,7 @@ const duiDir = path_1.default.join(__dirname, '../../../dui/');
 app.set('view engine', 'hbs');
 app.use('/projects/weather-getter/public', express_1.default.static(staticDir));
 app.use('/dui', express_1.default.static(duiDir));
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.render('index', {
         title: "Hieu"
     });

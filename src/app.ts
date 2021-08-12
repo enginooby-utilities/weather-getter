@@ -11,7 +11,7 @@ app.set('view engine', 'hbs')
 app.use('/projects/weather-getter/public', express.static(staticDir))
 app.use('/dui', express.static(duiDir))
 
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
         res.render('index', {
                 title: "Hieu"
         })
