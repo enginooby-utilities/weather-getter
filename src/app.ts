@@ -12,34 +12,34 @@ app.use('/projects/weather-getter/public', express.static(staticDir))
 app.use('/dui', express.static(duiDir))
 
 app.get('/', (req, res) => {
-        res.render('index', {
-                title: "Hieu"
-        })
+  res.render('index', {
+    title: "Hieu"
+  })
 })
 
 app.get('/weather', (req, res) => {
-        if (!req.query.location) return res.send({ error: 'Location is required.' })
+  if (!req.query.location) return res.send({ error: 'Location is required.' })
 
-        getCurrentTemp2(req.query.location.toString(), (error, { location, current }) => {
-                if (error) {
-                        res.send({
-                                error
-                        })
-                } else if (!location || !current) {
-                        res.send({ error: 'Unable to find location :\'(' })
-                }
-                else {
-                        res.send({
-                                location, current
-                        })
-                }
-        })
+  getCurrentTemp2(req.query.location.toString(), (error, { location, current }) => {
+    if (error) {
+      res.send({
+        error
+      })
+    } else if (!location || !current) {
+      res.send({ error: 'Unable to find location :\'(' })
+    }
+    else {
+      res.send({
+        location, current
+      })
+    }
+  })
 })
 
 app.get('*', (req, res) => {
-        res.send("404")
+  res.send("404")
 })
 
 app.listen(3001, () => {
-        console.log('http://localhost:3001/')
+  console.log('http://localhost:3001/')
 })

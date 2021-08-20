@@ -1,27 +1,27 @@
 :root {
-        --container-max-width: 600px;
+  --container-max-width: 600px;
 }
 
 .display-content > .container {
-        max-width: var(--container-max-width);
+  max-width: var(--container-max-width);
 }
 
 .title-bar {
-        display: none;
+  display: none;
 }
 
 #temperature {
-        font-size: 3.5rem;
+  font-size: 3.5rem;
 }
 
 input#location {
-        height: 51px;
+  height: 51px;
 }
 
 .weather-info {
-        font-style: italic;
+  font-style: italic;
 }
 
 p {
-        margin: 7px 0;
+  margin: 7px 0;
 }
